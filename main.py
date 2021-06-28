@@ -65,6 +65,7 @@ for i in nazwyeu:
     for lin in file:
         v,u = map(int, lin.split())
         graf.add_edge(v,u)
+    file.close()
 
     start = timer()
     Euler(graf)
@@ -82,7 +83,8 @@ for i in nazwyham:
     for lin in file:
         v,u = map(int, lin.split())
         graf.add_edge(v,u)
-
+    file.close()
+    
     start = timer()
     Hamilton_RobertsFlores(graf)
     end = timer()
